@@ -4,7 +4,7 @@
  * @param {number} x
  * @return {number}
  *
- * Time: O(sqrt(x)+1)
+ * Time: O(sqrt(x))
  * Space: O(1)
  */
 

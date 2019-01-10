@@ -5,7 +5,7 @@
  * @param {number[]} heaters
  * @return {number}
  *
- * Time: O(N)
+ * Time: O(max(M,N))
  * Space: O(N)
  */
 
