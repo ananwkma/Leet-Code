@@ -8,7 +8,7 @@ var repeatedStringMatch = function(A, B) {
 	let str = ''
 	for (let i = 1; str.length <= (A.length + B.length); i++) {
 		str += A
-        if(str.includes(B)) return i
+		if(str.includes(B)) return i
 	}
 	return -1
 };
