@@ -3,6 +3,9 @@
  * @param {string} A
  * @param {string} B
  * @return {number}
+ *
+ * Time: O()
+ * Space: O()
  */
 var repeatedStringMatch = function(A, B) {
 	let str = ''

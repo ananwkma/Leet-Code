@@ -9,6 +9,8 @@
  * Space: O()
  */
 
+//Timed out on one of the tests
+
 var findRadius = function(houses, heaters) {
 	if (heaters.length === 0) return -1
 	if (houses.length === 0) return 0
