@@ -1,5 +1,5 @@
 /*
- * https://leetcode.com/problems/unique-morse-code-words/?fbclid=IwAR1tb7JHMNKZ5XRezFFAQly4aDUj8nOBtGpn2q-RIMGJqM308Gktk5psIMI
+ * https://leetcode.com/problems/unique-morse-code-words/
  * @param {string[]} words
  * @return {number}
  */

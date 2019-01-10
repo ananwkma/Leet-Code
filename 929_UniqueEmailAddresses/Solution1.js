@@ -1,5 +1,5 @@
 /*
- * https://leetcode.com/problems/unique-email-addresses/?fbclid=IwAR3DMz_f6Qhj4bxJwPFst1rqCs_24L9IGYxXDZTGZHFOvjl0K1s1stjjC84
+ * https://leetcode.com/problems/unique-email-addresses/
  * @param {string[]} emails
  * @return {number}
  */
