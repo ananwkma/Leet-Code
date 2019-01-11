@@ -5,7 +5,7 @@
  * @return {boolean}
  *
  * Time: O(N)
- * Space: O(N/2)
+ * Space: O(1)
  */
 var canPlaceFlowers = function(flowerbed, n) {
 	lastFlower = 0
