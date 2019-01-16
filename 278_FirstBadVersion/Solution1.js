@@ -14,7 +14,7 @@
  * @param {function} isBadVersion()
  * @return {function}
  *
- * Time: O(N)
+ * Time: O(logN)
  * Space: O(1)
  */
 
@@ -33,7 +33,6 @@ var solution = (n) => {
             max = test
             if (test === (test - Math.floor((test - min) / 2))) break
             test = test - Math.floor((test - min) / 2)
-            console.log('abc')
         }
         else {
             min = test
