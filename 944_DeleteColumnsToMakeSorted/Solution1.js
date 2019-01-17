@@ -4,8 +4,8 @@
  * @param {string[]} A
  * @return {number}
  *
- * Time: O()
- * Space: O()
+ * Time: O(N)
+ * Space: O(1)
  */
 
 var minDeletionSize = function(A) {
