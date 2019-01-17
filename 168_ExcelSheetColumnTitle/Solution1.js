@@ -4,7 +4,7 @@
  * @param {number} n
  * @return {string}
  *
- * Time: O()
+ * Time: O(logN)
  * Space: O(1)
  */
 
@@ -22,6 +22,3 @@ var convertToTitle = function(n) {
 console.log('Expected: A' + '\n' + 'Output: ' + convertToTitle(1))
 console.log('Expected: AB' + '\n' + 'Output: ' + convertToTitle(28))
 console.log('Expected: ZY' + '\n' + 'Output: ' + convertToTitle(701))
-
-
-
