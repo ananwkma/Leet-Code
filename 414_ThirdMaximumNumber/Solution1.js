@@ -4,8 +4,8 @@
  * @param {number[]} nums
  * @return {number}
  *
- * Time: O()
- * Space: O()
+ * Time: O(N)
+ * Space: O(1)
  */
 
 var thirdMax = function(nums) {
@@ -28,7 +28,7 @@ var thirdMax = function(nums) {
 	    	}
     	}	
     })
-    if (max3 === 0) return max
+    if (max3 === Number.NEGATIVE_INFINITY) return max
     return max3
 };
 
