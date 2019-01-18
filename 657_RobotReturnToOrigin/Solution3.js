@@ -11,22 +11,12 @@
 
 var judgeCircle = function(moves) {
     let [horizCount, vertCount] = [0, 0]
+    let d = { U: [0, 1], D: [0, -1], L: [-1, 0], R: [1, 0] }
     moves.split('').map(move => {
-    	switch (move) {
-    		case 'U': 
-    			vertCount++
-    			break
-    		case 'D': 
-    			vertCount--
-    			break
-    		case 'L': 
-    			horizCount--
-    			break
-    		case 'R': 
-    			horizCount++
-    			break
-    	}
-    })
+        let [dx, dy] = d[move]
+        horizCount += dx
+        vertCount += dy	
+    }
     return (horizCount === 0 && vertCount === 0)
 };
 
