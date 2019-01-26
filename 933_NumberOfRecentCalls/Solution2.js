@@ -2,7 +2,7 @@
  * https://leetcode.com/problems/number-of-recent-calls/
  *
  * Time: O(N)
- * Space: O(N)
+ * Space: O(1) (technically can be up to however large the window is 0-3000 if ints)
  */
 var RecentCounter = function() {
     this.calls = []
