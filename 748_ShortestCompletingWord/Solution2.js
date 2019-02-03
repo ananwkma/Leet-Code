@@ -6,7 +6,7 @@
  * @return {string}
  *
  * Time: O(AB) (A = letters in plate, B = total characters in all words)
- * Space: O(1)
+ * Space: O(N) (A + longest string from words)
  *
  */
 
