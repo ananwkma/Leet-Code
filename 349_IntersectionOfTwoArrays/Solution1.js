@@ -13,22 +13,14 @@
 matchingKeys = (set1, set2) => {
 	let res = []
 	set1.forEach(entry => {
-		if (set1.has(entry) && set2.has(entry)) res.push(entry)
+		if (set2.has(entry)) res.push(entry)
 	})
 	return res
 }
 
-convertIntoObject = (arr, set) => {
-	for (let i = 0; i < arr.length; i++) {
-		set.add(arr[i])
-	}
-}
-
 var intersection = function(nums1, nums2) {
-    let set1 = new Set()
-    let set2 = new Set()
-    convertIntoObject(nums1, set1)
-    convertIntoObject(nums2, set2)
+    let set1 = new Set(nums1)
+    let set2 = new Set(nums2)
     return matchingKeys(set1, set2)
 };
 
