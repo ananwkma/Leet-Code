@@ -35,9 +35,7 @@ var wordPattern = function(pattern, str) {
 			if (values.has(cStr)) return false
 			obj[cPat] = cStr
 		}
-		else {
-			if (obj[cPat] !== cStr) return false
-		}
+		else if (obj[cPat] !== cStr) return false
 		values.add(cStr)
 	}
 	return true
