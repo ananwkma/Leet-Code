@@ -1,7 +1,7 @@
 /*
- * (Link)
+ * Link
  * 
- * (Params)
+ * Params
  *
  * Time: O()
  * Space: O()
