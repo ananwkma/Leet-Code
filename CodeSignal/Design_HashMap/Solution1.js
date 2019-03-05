@@ -7,7 +7,7 @@ function hashMap(queryType, query) {
     return this.count;
 }
 
-insert = (x) => {
+let insert = (x) => {
     console.log(x[0])
     console.log(x[1])
     console.log('obj',this.obj)

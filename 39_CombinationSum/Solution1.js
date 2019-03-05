@@ -5,47 +5,30 @@
  * @param {number} target
  * @return {number[][]}
  *
- * Time: O()
- * Space: O()
+ * Time: O(N^2)
+ * Space: O(N^2)
  *
  */
 
-// var combinationSum = function(candidates, target) {
-//     let res = [];
-//     let j = 0
-
-// 	dfs = (progress, c, sum) => {
-// 		console.log(progress,c,sum,j)
-// 		if (sum === target) {
-// 			j++;
-// 			return res.push(progress);
-// 		}
-// 		if (sum > target || c.length === 0) return;
-// 		for (let i = j; i < candidates.length; i++) {
-// 			let newProgress = [...progress, c[i]];
-// 			dfs(newProgress, c, sum + c[i]);
-// 		}
-// 	}
-// 	dfs([], candidates, 0);
-// 	return res;
-// };
-
-
 var combinationSum = function(candidates, target) {
-  let res = [];
-  let dfs = (progress, currIdx, sum) => {
-    if (sum === target) { return res.push(progress); }
-    if (sum > target || currIdx === candidates.length) return;
-    for (let i = currIdx; i < candidates.length; i++) {
-      let newProgress = [...progress, candidates[i]];
-      let newC = i
-      dfs(newProgress, newC, sum + candidates[i]);
-    }
-  }
-  dfs([], 0, 0);
-  return res;
-};
+    let res = [];
 
+	dfs = (progress, idx, sum) => {
+		if (sum > target) return;
+		if (sum === target) return res.push(progress);
+
+		for (let i = idx; i < candidates.length; i++) {
+			let curNum = candidates[i]
+			let newProgress = [...progress, curNum];
+			dfs(newProgress, idx, sum + curNum);
+			idx++;
+		}
+	}
+
+	dfs([], 0, 0);
+
+	return res;
+};
 
 // [2,3,5], 8
 
@@ -69,7 +52,6 @@ var combinationSum = function(candidates, target) {
 //		3+5+5		<-- cut off 		[5]
 // 5									[5]
 //	5+5				<-- cut off 		[5]
-
 
 
 console.log('Expected: [[7],[2,2,3]]' + '\n' + 'Output: ' + combinationSum([2,3,6,7], 7))
