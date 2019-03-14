@@ -4,8 +4,8 @@
  * @param {string} s
  * @return {number}
  *
- * Time: O()
- * Space: O()
+ * Time: O(N)
+ * Space: O(N)
  *
  */
 
