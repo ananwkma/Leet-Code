@@ -9,8 +9,8 @@
  * @param {number[]} nums
  * @return {TreeNode}
  *
- * Time: O()
- * Space: O()
+ * Time: O(N^2)
+ * Space: O(N)
  *
  */
 

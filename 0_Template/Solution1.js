@@ -9,7 +9,7 @@
  */
 
 var EXAMPLE = function(N) {
-
+  
 };
 
 console.log('Expected: ' + '\n' + 'Output: ' + EXAMPLE())
