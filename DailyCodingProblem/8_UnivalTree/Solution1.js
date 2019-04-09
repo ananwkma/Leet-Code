@@ -1,7 +1,7 @@
 /*
  *
- * Time: O()
- * Space: O()
+ * Time: O(N)
+ * Space: O(H)
  *
  */
 
