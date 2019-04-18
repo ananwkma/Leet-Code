@@ -8,7 +8,7 @@
  *
  */
 
-var EXAMPLE = function(N) {
+const EXAMPLE = function(N) {
   
 };
 
