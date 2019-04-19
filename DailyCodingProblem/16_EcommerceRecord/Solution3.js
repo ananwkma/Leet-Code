@@ -9,33 +9,25 @@
 // You should be as efficient with time and space as possible.
 
 class Orders {
-  constructor () {
+  constructor (N) {
     this.log = [];
+    this.limit = N;
   }
 
   record(order_id) {
     this.log.push(order_id);
+    if (this.log.length > this.limit) this.log.shift();
   };
 
-  get_last(i) {
-    return this.log[this.log.length-1-i];
-  };
-}
-
-const getRecentOrders = (orders, N) => {
-  let res = [];
-  for (let i = 0; i < N; i++) {
-    res.push(orders.get_last(i));
+  getRecent() {
+    return this.log;
   }
-  return res;
 }
 
-let o = new Orders();
+let o = new Orders(3);
 o.record(1);
 o.record(2);
 o.record(3);
 o.record(4);
 o.record(5);
-console.log(o);
-
-console.log(getRecentOrders(o, 3));
+console.log(o.getRecent());

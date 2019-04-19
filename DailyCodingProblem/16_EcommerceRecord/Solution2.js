@@ -23,11 +23,7 @@ class Orders {
 }
 
 const getRecentOrders = (orders, N) => {
-  let res = [];
-  for (let i = 0; i < N; i++) {
-    res.push(orders.get_last(i));
-  }
-  return res;
+  return orders.log.slice(orders.log.length - N, orders.log.length)
 }
 
 let o = new Orders();
