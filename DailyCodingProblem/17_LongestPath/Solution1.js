@@ -53,7 +53,45 @@
 
 
 const longestPath = (path) => {
-  console.log(path.split('\\'));
+  path = path.split('\\');
+  let longest = 0;
+  let stack = [];
+  let [prevDepth, curDepth] = [-1, 0];
+
+  for (let i = 0; i < path.length; i++) {
+
+    if (path[i] === 'n') {
+      prevDepth = curDepth;
+      curDepth = 1;
+    } 
+    else if (path[i] === 't') {
+      curDepth++;
+    } 
+    else {
+      while (curDepth <= prevDepth) {
+        stack.pop();
+        prevDepth--;
+      } 
+      stack.push(path[i]);
+      let curLen = stack.reduce((acc, entry) => acc + entry.length, 0);
+      if (curLen > longest) longest = curLen;
+    }
+  }
+  return longest;
 }
 
 console.log('Expected: 32' + '\n' + 'Output: ' + longestPath(`dir\\n\\tsubdir1\\n\\t\\tfile1.ext\\n\\t\\tsubsubdir1\\n\\tsubdir2\\n\\t\\tsubsubdir2\\n\\t\\t\\tfile2.ext`))
+
+// [ 'dir',
+//   'n',
+//   'tsubdir1',
+//   'n', 't',
+//   'tfile1.ext',
+//   'n', 't', 
+//   'tsubsubdir1', 
+//   'n', 
+//   'tsubdir2', 
+//   'n', 't', 
+//   'tsubsubdir2', 
+//   'n', 't', 't', 
+//   'tfile2.ext' ]
