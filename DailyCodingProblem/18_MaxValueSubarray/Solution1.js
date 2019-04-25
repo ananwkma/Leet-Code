@@ -1,7 +1,7 @@
 /*
  *
- * Time: O()
- * Space: O()
+ * Time: O(N^2)
+ * Space: O(N)
  *
  */
 
@@ -20,8 +20,15 @@
 // You can modify the input array in-place and you do not need to store the results. 
 // You can simply print them out as you compute them.
 
-const maxValue = (path) => {
-
+const maxValue = (arr, k) => {
+  let queue = [];
+  for (let i = 0; i < arr.length; i++) {
+    queue.push(arr[i]);
+    if (i >= k - 1) {
+      console.log(Math.max(...queue));
+      queue.shift();
+    }
+  }
 }
 
-console.log('Expected: 10,7,8,8' + '\n' + 'Output: ' + maxValue([10, 7, 8, 8]))
+console.log('Expected: 10,7,8,8' + '\n' + 'Output: ' + maxValue([10, 5, 2, 7, 8, 7], 3))
