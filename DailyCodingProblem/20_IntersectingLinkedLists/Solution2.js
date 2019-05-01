@@ -16,8 +16,21 @@
 // Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
 
 
-compareLinkedLists = (list1, list2) => {
+// A = {1,3,5,7,9,11}
+// B = {2,4,9,11}
+//
+// 1 3 5 7  9 11 2 4 9 11
+//            ^
+// 2 4 9 11 1 3  5 7 9 11
+//       ^
 
+compareLinkedLists = (list1, list2) => {
+  if (!list1 || !list2) return null;
+  while (list1 !== list2) {
+    list1 = list1 ? list1.next : list2;
+    list2 = list2 ? list2.next : list1;
+  }
+  return list1;
 }
 
 class Node {
@@ -38,6 +51,12 @@ listA_2.next = listAB_3;
 listAB_3.next = listAB_4;
 listB_1.next = listB_2;
 listB_2.next = listAB_3;
+let listC = new Node(5);
+let listC_2 = new Node(5);
+let listC_3 = new Node(5);
+listC.next = listC_2;
+listC_2.next = listC_3;
 
 console.log(compareLinkedLists(listA_1, listB_1));
+console.log(compareLinkedLists(listAB_3, listC))
 // console.log(listA_1)

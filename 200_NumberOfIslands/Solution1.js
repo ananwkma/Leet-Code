@@ -4,8 +4,8 @@
  * @param {character[][]} grid
  * @return {number}
  *
- * Time: O()
- * Space: O()
+ * Time: O(MN)
+ * Space: O(MN)
  *
  */
 
