@@ -1,6 +1,6 @@
 class HashMap {
   constructor() {
-      this.map = {};
+    this.map = {};
   	this.keyOffset = 0;
   	this.valueOffset = 0;
   }
@@ -18,7 +18,7 @@ class HashMap {
   }
 
   addToValue(y) {
-	this.valueOffset += y;
+	  this.valueOffset += y;
   }
 }
 
