@@ -5,7 +5,7 @@
  * @param {string} t
  * @return {boolean}
  *
- * Time: O(N^2)
+ * Time: O(N)
  * Space: O(N)
  *
  */
@@ -13,8 +13,8 @@
 objectify = (str, obj) => {
 	for (let i = 0; i < str.length; i++) {	
 		let key = str.charAt(i)
-    	obj[key] ? (obj[key]++) : (obj[key] = 1)
-    }
+  	obj[key] ? obj[key]++ : obj[key] = 1;
+  }
 }
 
 comapreObjects = (sObj, tObj) => {
@@ -33,6 +33,6 @@ var isAnagram = function(s, t) {
 	return comapreObjects(sObj, tObj)
 };
 
-// console.log('Expected: false' + '\n' + 'Output: ' + isAnagram("a", "ab"))
-// console.log('Expected: true' + '\n' + 'Output: ' + isAnagram("anagram", "nagaram"))
-// console.log('Expected: false' + '\n' + 'Output: ' + isAnagram("rat", "car"))
+console.log('Expected: false' + '\n' + 'Output: ' + isAnagram("a", "ab"))
+console.log('Expected: true' + '\n' + 'Output: ' + isAnagram("anagram", "nagaram"))
+console.log('Expected: false' + '\n' + 'Output: ' + isAnagram("rat", "car"))
